@@ -6,7 +6,7 @@
   <title>IC-Shoes</title>
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="styleRegis.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/styleRegis.css" />
 </head>
 <body>
     <div class="container-fluid banner">
