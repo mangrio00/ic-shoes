@@ -17,12 +17,12 @@ class Login extends CI_Controller {
 	public function login()
 	{
 		$data = [
-			"email" => $this->input->post('email', true),
-			"password" => $this->input->post('password', true),
+			"usernameUser" => $this->input->post('username', true),
+			"passwordUser" => $this->input->post('password', true),
 		];
-		$masuk = $this->UserModel->login($data);
-		if ($masuk == TRUE) {
-			$this->session->set_userdata('email', $data['emailUser']);
+		$masuk = $this->user_Model->login($data);
+		if ($masuk == True) {
+			$this->session->set_userdata('username', $data['usernameUser']);
 			redirect(base_url());
 		} else {
 			$this->load->view('login');

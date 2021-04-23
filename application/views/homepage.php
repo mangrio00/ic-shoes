@@ -6,7 +6,7 @@
   <title>IC-Shoes</title>
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="/assets/css/styleHomepage.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/styleHomepage.css" />
 </head>
 <body>
   <div class="container-fluid banner">
@@ -27,9 +27,18 @@
             <li class="nav-item">
               <a class="nav-link" href="#">REGISTER</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">LOGIN</a>
-            </li>
+            <?php if ($_SESSION['username']!="Guest") { ?>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><?= $_SESSION['username'] ?></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url('Welcome/logout') ?>">LOGOUT</a>
+              </li>
+            <?php } else { ?>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url('login') ?>">LOGIN</a>
+              </li>
+            <?php } ?>
           </ul>
         </nav>
       </div>
