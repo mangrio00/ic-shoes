@@ -42,12 +42,27 @@
           </ul>
         </nav>
       </div>
-      <div class="col-md-8 offset-md-2 info">
-        <h1 class="text-center">Looking for a new Shoes ?</h1>
-        <p class="text-center">
-          World No. 1 Shoes Seller 
-        </p>
-        <a href="#" class="btn btn-md text-center">GET STARTED</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="dashboard-wrapper dashboard-user-profile">
+              <div class="media">
+                <div class="media-body">
+                  <ul class="user-profile-list">
+                    <li><span>Nama:</span><?= $result['namaUser'] ?></li>
+                    <li><span>Country:</span>USA</li>
+                    <li><span>Email:</span>mail@gmail.com</li>
+                    <li><span>Phone:</span>+880123123</li>
+                    <li><span>Date of Birth:</span>Dec , 22 ,1991</li>
+                  </ul>
+                </div>
+                <div class="pull-right align-bottom" href="#!">
+                    <button type="button" class="btn btn-dark">Edit Profile</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

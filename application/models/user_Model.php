@@ -14,4 +14,10 @@ class user_Model extends CI_Model{
 			return False;
 		}
 	}
+
+	public function getUserData($data)
+	{
+		$this->db->where('usernameUser', $data['usernameUser']);
+		return $result = $this->db->get('user')->result_array();
+	}
 }
