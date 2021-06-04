@@ -20,15 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		if (!$this->session->has_userdata('username')) {
-			$_SESSION['username'] = "Guest";
-		}
-		$this->load->view('homepage');
-	}
-
-	public function logout()
-	{
-		$this->session->sess_destroy();
-		redirect(base_url());
+		$this->load->view('welcome_message');
 	}
 }
