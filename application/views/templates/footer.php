@@ -35,7 +35,7 @@
                     <p class="small text-muted mb-0">&copy; 2020 All rights reserved.</p>
                 </div>
                 <div class="col-lg-6 text-lg-right">
-                    <p class="small text-muted mb-0">Template designed by <a class="text-white reset-anchor" href="https://bootstraptemple.com/p/bootstrap-ecommerce">Bootstrap Temple</a></p>
+                    <p class="small text-muted mb-0">@IC-Shoes </p>
                 </div>
             </div>
         </div>
