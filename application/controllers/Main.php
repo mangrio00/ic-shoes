@@ -76,6 +76,18 @@ class Main extends CI_Controller
         }
     }
 
+    public function wishlist()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        if ($data['user'] && $data['user']['role_id'] == 2) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('pages/wishlist');
+            $this->load->view('templates/footer');
+        } else {
+            // redirect('auth/logout');
+        }
+    }
+
     public function myProfile()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();

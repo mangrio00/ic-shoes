@@ -65,8 +65,25 @@
                                                                 <ul class="mb-0 list-inline mt-3">
                                                                     <li class="list-inline-item m-0 p-0"><b class="btn btn-sm btn-outline-dark" href="#">Stock : <?= $barang['stok'] ?></b></li>
                                                                     <!-- <li class="list-inline-item m-0 p-0"><b class="btn btn-sm btn-dark" href="cart.html">Details</b></li> -->
-                                                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-danger" href="<?= base_url('admin/deleteBarang/' . $barang['id_barang']) ?>"><i class="far fa-trash-alt"></i></a></li>
+                                                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#Modal<?= $barang['id_barang'] ?>"><i class="far fa-trash-alt"></i></a></li>
                                                                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-primary" href="<?= base_url('admin/formEditBarang/' . $barang['id_barang']) ?>"><i class="far fa-edit"></i></a></li>
+                                                                    <div class="modal fade" id="Modal<?= $barang['id_barang'] ?>" tabindex="-1" role="dialog" aria-labelledby="Modal<?= $barang['id_barang'] ?>Label" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title">Delete Barang?</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                        <span aria-hidden="true">&times;</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                                                                                    <button type="button" class="btn btn-sm btn-outline-primary"><a href="<?= base_url('admin/deleteBarang/' . $barang['id_barang']) ?>">Delete</a></button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </ul>
                                                             </div>
                                                         </div>

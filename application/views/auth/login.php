@@ -63,7 +63,6 @@
 
                 <div class="col-md-6 rounded-right" style="background-color: whitesmoke;height:352px">
                     <h3 class="text-center mt-3">Login</h3>
-                    <?php $this->session->flashdata('pesan'); ?>
                     <!-- <hr> -->
                     <form class="col-md-12" action="<?= base_url('auth') ?>" method="post">
                         <div class="d-flex justify-content-center">
@@ -91,6 +90,7 @@
                                 <div class="d-flex justify-content-around mt-0">
                                     <button type="submit" class="btn btn-success">SUBMIT</button>
                                 </div>
+                                <?php echo $this->session->flashdata('pesan'); ?>
                             </div>
                         </div>
                         <a class="d-flex justify-content-center mt-3" href="<?= base_url('auth/registration') ?>">Create Account?</a>

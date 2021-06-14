@@ -56,9 +56,12 @@
             <h2 class="h5 text-uppercase mb-4">Browse our products</h2>
             <?php echo form_open('main/searchbarang') ?>
             <input type="text" name="keyword" class="form-control" placeholder="Search">
+            <br>
             <button type="submit" class="btn btn-success">Find</button>
             <?php echo form_close() ?>
+            <br>
         </header>
+        
         <div class="row">
             <!-- PRODUCT-->
             <?php foreach ($barangs as $barang) : ?>
