@@ -29,7 +29,24 @@
                     <input type="text" name="no_hp" class="form-control" id="no_hp" placeholder="Masukan Nomor HP User" value="<?= $user['no_hp'] ?>">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalUpdate">Update</button>
+                <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="ModalUpdateLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Confirm Update?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Back</button>
+                                <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

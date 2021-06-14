@@ -108,7 +108,24 @@
                                     <option value="COD">COD</option>
                                 </select>
                                 <hr>
-                                <button class="btn btn-outline-dark btn-sm mt-1 w-100" type="submit">Procceed to checkout<i class="fas fa-long-arrow-alt-right ml-2"></i></button>
+                                <button class="btn btn-outline-dark btn-sm mt-1 w-100" type="button" data-toggle="modal" data-target="#ModalCheckout">Procceed to checkout<i class="fas fa-long-arrow-alt-right ml-2"></i></button>
+                                <div class="modal fade" id="ModalCheckout" tabindex="-1" role="dialog" aria-labelledby="ModalCheckoutLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Confirm Checkout?</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-sm btn-outline-primary">Proceed</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                         </ul>
                     </div>

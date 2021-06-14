@@ -102,8 +102,25 @@
                                                                     <?php endif ?>
                                                                 </td>
                                                                 <td style="text-transform: uppercase;width: 150px !important;">
-                                                                    <a class="btn btn-sm btn-outline-danger" href="<?= base_url('admin/deleteUser/') . $data['id_user'] ?>"><i class="far fa-trash-alt"></i></a>
+                                                                    <a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#Modal<?= $data['id_user'] ?>"><i class="far fa-trash-alt"></i></a>
                                                                     <a class="btn btn-sm btn-outline-info" href="<?= base_url('admin/formEditUser/') . $data['id_user'] ?>"><i class="far fa-edit"></i></a>
+                                                                    <div class="modal fade" id="Modal<?= $data['id_user'] ?>" tabindex="-1" role="dialog" aria-labelledby="Modal<?= $data['id_user'] ?>Label" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title">Delete User?</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                        <span aria-hidden="true">&times;</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                                                                                    <button type="button" class="btn btn-sm btn-outline-primary"><a href="<?= base_url('admin/deleteUser/') . $data['id_user'] ?>">Delete</a></button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                         <?php endforeach ?>
@@ -176,7 +193,24 @@
                                                         </div><br>
                                                     </div>
 
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalAdd">Submit</button>
+                                                    <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="ModalAdd" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Confirm Addition?</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                            
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Back</button>
+                                                                    <button type="submit" class="btn btn-sm btn-outline-primary">Add User</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
