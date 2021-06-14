@@ -51,6 +51,7 @@
                                 <li class="nav-item">
                                     <!-- Link--><a class="nav-link" href="<?= base_url('main/shop') ?>">Shop</a>
                                 </li>
+
                             <?php elseif ($this->uri->segment(2) == "shop") : ?>
                                 <li class="nav-item">
                                     <!-- Link--><a class="nav-link" href="<?= base_url('main') ?>">Home</a>

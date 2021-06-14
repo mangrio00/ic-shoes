@@ -61,16 +61,16 @@
         </header>
         <div class="row">
             <!-- PRODUCT-->
-            <?php foreach ($barangs as $barang) : ?>
-                <?php if ($barang['stok'] > 0) : ?>
+            <?php foreach ($brg_get as $barang) : ?>
+                <?php if ($barang->stok > 0) : ?>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="product text-center">
                             <div class="position-relative mb-3">
-                                <div class="badge text-white badge-info"><?= $barang['brand'] ?></div><a class="d-block" href="#"><img style="height: 250px !important;" class="img-fluid w-100" src="<?= base_url('assets/img/barang/' . $barang['image']) ?>" alt="..."></a>
+                                <div class="badge text-white badge-info"><?= $barang->brand ?></div><a class="d-block" href="#"><img style="height: 250px !important;" class="img-fluid w-100" src="<?= base_url('assets/img/barang/' . $barang->image) ?>" alt="..."></a>
                                 <div class="product-overlay">
                                     <ul class="mb-0 list-inline">
                                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                        <form action="<?= base_url('main/addToCart/' . $barang['id_barang']) ?>" method="POST">
+                                        <form action="<?= base_url('main/addToCart/' . $barang->id_barang) ?>" method="POST">
                                             <li class="list-inline-item m-0 p-0">
                                                 <button type="submit" class="btn btn-sm btn-dark">Add to Cart</button>
                                             </li>
@@ -94,15 +94,15 @@
                                     </ul>
                                 </div>
                             </div>
-                            <h6> <a class="reset-anchor" href="detail.html"><?= $barang['nama_barang'] ?></a></h6>
-                            <p class="small text-muted">Rp.<?= number_format($barang['harga'], 0, ',', '.') ?></p>
+                            <h6> <a class="reset-anchor" href="detail.html"><?= $barang->nama_barang ?></a></h6>
+                            <p class="small text-muted">Rp.<?= number_format($barang->harga, 0, ',', '.') ?></p>
                         </div>
                     </div>
                 <?php else : ?>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="product text-center">
                             <div class="position-relative mb-3">
-                                <div class="badge text-white badge-info"><?= $barang['brand'] ?></div><a class="d-block" href="#"><img style="height: 250px !important;" class="img-fluid w-100" src="<?= base_url('assets/img/barang/' . $barang['image']) ?>" alt="..."></a>
+                                <div class="badge text-white badge-info"><?= $barang->brand ?></div><a class="d-block" href="#"><img style="height: 250px !important;" class="img-fluid w-100" src="<?= base_url('assets/img/barang/' . $barang['image']) ?>" alt="..."></a>
                                 <div class="product-overlay">
                                     <ul class="mb-0 list-inline">
                                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
@@ -110,7 +110,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <h6> <a class="reset-anchor" href="detail.html"><?= $barang['nama_barang'] ?></a></h6>
+                            <h6> <a class="reset-anchor" href="detail.html"><?= $barang->nama_barang ?></a></h6>
                             <b style="font-weight: bold;" class="small badge-danger">SOLD OUT</b>
                         </div>
                     </div>

@@ -39,6 +39,19 @@ class Main extends CI_Controller
         // redirect('auth/logout');
         // }
     }
+
+
+    public function searchbarang()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['barangs'] = $this->AdminModel->getAllData();
+        $keyword = $this->input->post('keyword');
+        $data['brg_get'] = $this->AdminModel->get_brg($keyword);
+        $this->load->view('templates/header', $data);
+        $this->load->view('pages/search', $data);
+        $this->load->view('templates/footer');
+    }
+
     public function shop()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();

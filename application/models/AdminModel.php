@@ -96,4 +96,11 @@ class AdminModel extends CI_Model
         $row = $query->row();
         return $this->db->delete('transaksi', array('id_transaksi' => $id));
     }
+    public function get_brg($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('barang');
+        $this->db->like('nama_barang', $keyword);
+        return $this->db->get()->result();
+    }
 }
